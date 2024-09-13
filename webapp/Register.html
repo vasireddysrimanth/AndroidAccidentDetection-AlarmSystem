@@ -1,0 +1,96 @@
+<html>
+  <head>
+    <style>
+      .container {
+        text-align: left;
+        width: 250px;
+        font-size: large;
+        color: #000000;
+        padding: 30px;
+        margin-left: 39%;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      input[type=submit]{
+        font-size: 20px;
+        margin-right: 10px;
+        color: red;
+        cursor: pointer;
+        padding: 5px 10px;
+      }
+      input[type=reset]{
+        font-size: 20px;
+        color: red;
+        margin-left: 10px;
+        cursor: pointer;
+        padding:  5px 10px;
+      }
+      .input1{
+        outline: none;
+        border: none;
+        margin: 5px;
+        font-size: large;
+        border-bottom:2px solid red;
+        height: 25px;
+        width: 250px;
+        padding: 15px;
+      }
+      .input1:hover{
+        border-bottom: 3px solid red;
+      }
+      .input1:focus{
+        border-bottom: 3px solid red;
+      }
+      legend{
+        background: gray;
+      }
+      body{
+        text-align: center;
+      }
+      select{
+        font-size: large;
+        border: none;
+        width: 250px;
+        outline: none;
+        padding-top: 15px;
+        padding-left: 15px;
+        border-bottom: 2px solid  red;
+        cursor: pointer;
+      }
+      select:hover{
+        border-bottom: 3px solid red;
+      }
+      select:focus{
+        border-bottom: 3px solid red;
+      }
+      span{
+      color: red;
+      }
+    </style>
+  </head>
+  <body>    
+  <form action="register"  method="post" onsubmit="return validate(this)" autocomplete="off">
+      <div class="Container">
+        <fieldset style="padding: 20px;margin: none;">
+          <legend style="font-size: x-large;color: white;">Register :</legend>
+          Name :		      	<span id="nameerr"></span><input class="input1" type="text" name="name">
+          Email : 				<span id="emailerr"></span> <input class="input1" type="email" name="email"> 
+          Phone :				<span id="phoneerr"></span> <input class="input1" type="text" name="phone">
+          Password :			<span id="pworderr"></span> <input class="input1" type ="password" name="password">
+          Date of Birth :	<span id="dateerr"></span><input class="input1" type="date" name="dob">
+          Blood Group :	
+			<span id="bgerr"></span>
+          <select name="bldgrp" id="bldgrp" required="required"> 
+            <option>--select--</option>
+            <option value="O">O</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="AB">AB</option>
+          </select>
+        </fieldset> 
+        </div>
+        <input type="submit" value="Register"><input type="reset" value="cancel">
+        </form>
+        <script src="RegValidation.js"></script>
+  </body>
+</html>
+            
